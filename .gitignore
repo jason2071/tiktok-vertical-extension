@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Chrome extension packaging artifacts
+*.crx
+*.pem
+*.zip
+
+# Node (only if tooling is added later)
+node_modules/
