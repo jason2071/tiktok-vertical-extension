@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "TikTok Live — Force Vertical Layout",
+  "version": "1.0.0",
+  "description": "Automatically switches TikTok LIVE dual-layout streams to vertical layout on every live, so you never have to toggle it manually.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "TikTok Live — Force Vertical Layout",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.tiktok.com/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
